@@ -492,7 +492,7 @@ function DiscordLib:Window(text)
 UserInputService.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.V then
 
-      Discord.Visible = false
+   MainFrame.Visible = false 
   DiscordLib.Visible = false
 
     end
