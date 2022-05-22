@@ -287,7 +287,8 @@ function DiscordLib:Window(text)
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
-			Discord.Destroy()
+		Discord.Destroy()
+			DiscordLib.Destroy()
 		end
 	)
 
