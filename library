@@ -287,7 +287,7 @@ function DiscordLib:Window(text)
 
 	CloseBtn.MouseButton1Click:Connect(
 		function()
-			MainFrame:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+			Discord.Destroy()
 		end
 	)
 
@@ -487,13 +487,13 @@ function DiscordLib:Window(text)
 	CloseSettingsBtn.MouseLeave:Connect(function()
 		CloseSettingsBtnCircle.BackgroundColor3 = Color3.fromRGB(54, 57, 63)
 	end)
-
+togglelol1 = false
 	local UserInputService = game:GetService("UserInputService")
 UserInputService.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.V then
+togglelol1 = not togglelol1
+   MainFrame.Visible = togglelol1 
 
-   MainFrame.Visible = false 
-  DiscordLib.Visible = false
 
     end
 end)
