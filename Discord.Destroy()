@@ -285,15 +285,7 @@ function DiscordLib:Window(text)
 	ServersHoldPadding.Name = "ServersHoldPadding"
 	ServersHoldPadding.Parent = ServersHold
 
-	CloseBtn.MouseButton1Click:Connect(
-		function()
-		MainFrame:Destroy()
-		Discord:Destroy()
-		DiscordLib:Destroy()
-		
 	
-		end
-	)
 
 	CloseBtn.MouseEnter:Connect(
 		function()
@@ -339,6 +331,13 @@ function DiscordLib:Window(text)
 				)
 			end
 			minimized = not minimized
+		end
+	)
+	CloseBtn.MouseButton1Click:Connect(
+		function()
+     Discord:Destroy()
+   DiscordLib:Destroy()
+		
 		end
 	)
 	
